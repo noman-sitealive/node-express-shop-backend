@@ -1,9 +1,12 @@
 const express = require('express');
+var bodyParser = require('body-parser')
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const cors = require('cors');
+const jsonParser = bodyParser.json()
 const app = express();
+app.use(express.json());
 // Import routes
 
 const productRoute = require('./routes/products');
